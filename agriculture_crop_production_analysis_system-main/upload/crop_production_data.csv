@@ -1,0 +1,19 @@
+crop_name,region_name,year,cultivated_area_ha,production_tonnes,rainfall_mm
+Rice,Andhra Pradesh,2021,1000,4000,850
+Rice,Andhra Pradesh,2022,1100,4620,900
+Rice,Andhra Pradesh,2023,1200,5040,880
+Rice,Telangana,2021,800,3200,780
+Rice,Telangana,2022,850,3570,820
+Rice,Telangana,2023,900,3870,800
+Wheat,Karnataka,2021,600,1800,650
+Wheat,Karnataka,2022,650,2080,680
+Wheat,Karnataka,2023,700,2310,700
+Cotton,Telangana,2021,700,1400,720
+Cotton,Telangana,2022,750,1575,760
+Cotton,Telangana,2023,800,1680,740
+Maize,Tamil Nadu,2021,500,2500,900
+Maize,Tamil Nadu,2022,550,2860,920
+Maize,Tamil Nadu,2023,600,3180,910
+Sugarcane,Maharashtra,2021,400,28000,1000
+Sugarcane,Maharashtra,2022,420,30240,1050
+Sugarcane,Maharashtra,2023,450,33300,1020

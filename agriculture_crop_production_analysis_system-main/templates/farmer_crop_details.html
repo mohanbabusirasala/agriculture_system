@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Crop Details</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #eef5e9;
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            text-align: center;
+            color: #28652e;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 12px;
+            background: #28652e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            color: #28652e;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>🌾 Farmer Crop Details</h2>
+
+    <form action="/farmer-crop-details" method="POST">
+        <label for="farmer_id">Farmer ID</label>
+        <input type="number" id="farmer_id" name="farmer_id"
+               min="1" required>
+
+        <label for="crop_id">Crop</label>
+        <select id="crop_id" name="crop_id" required>
+            <option value="">Select crop</option>
+            {% for crop in crops %}
+            <option value="{{ crop.crop_id }}">
+                {{ crop.crop_name }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label for="region_id">Region</label>
+        <select id="region_id" name="region_id" required>
+            <option value="">Select region</option>
+            {% for region in regions %}
+            <option value="{{ region.region_id }}">
+                {{ region.region_name }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <label for="year">Year</label>
+        <input type="number" id="year" name="year"
+               min="1" max="2100" required>
+
+        <label for="cultivated_area_ha">Cultivated Area (hectares)</label>
+        <input type="number" id="cultivated_area_ha"
+               name="cultivated_area_ha" min="0.01"
+               step="0.01" required>
+
+        <label for="production_tonnes">Production (tonnes)</label>
+        <input type="number" id="production_tonnes"
+               name="production_tonnes" min="0"
+               step="0.01" required>
+
+        <label for="rainfall_mm">Rainfall (mm)</label>
+        <input type="number" id="rainfall_mm" name="rainfall_mm"
+               min="0" step="0.01">
+
+        <button type="submit">Save Crop Details</button>
+    </form>
+
+    {% if message %}
+    <div class="message">{{ message }}</div>
+    {% endif %}
+</div>
+</body>
+</html>

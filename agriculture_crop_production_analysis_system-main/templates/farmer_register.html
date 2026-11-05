@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            text-align: center;
+            color: #28652e;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #28652e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4d23;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 15px;
+            color: #28652e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🌾 Farmer Registration</h2>
+        <p>Register your details to contribute crop data.</p>
+
+        <form action="/farmer-register" method="POST">
+            <label for="farmer_name">Farmer Name</label>
+            <input type="text" id="farmer_name"
+                   name="farmer_name" required>
+
+            <label for="mobile_number">Mobile Number</label>
+            <input type="tel" id="mobile_number"
+                   name="mobile_number"
+                   pattern="[0-9]{10}"
+                   maxlength="10" minlength="10"
+                   title="Enter a 10-digit mobile number"
+                   required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password"
+                   name="password" minlength="8" required>
+
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password"
+                   name="confirm_password" minlength="8" required>
+
+            <label for="village">Village</label>
+            <input type="text" id="village"
+                   name="village" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

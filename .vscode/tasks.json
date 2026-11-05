@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Crop Analysis Flask App",
+			"type": "shell",
+			"command": "py",
+			"args": [
+				"agriculture_crop_production_analysis_system-main\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": [
+				"$python"
+			]
+		}
+	]
+}

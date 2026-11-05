@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Crop Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f7f2;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #cccccc;
+        }
+
+        input, button {
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        button {
+            background: #2e7d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Crop Dataset</h1>
+        <p>Select a CSV file containing crop production data.</p>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv" required>
+            <br>
+            <button type="submit">Upload CSV</button>
+        </form>
+
+        <p><a href="/reports">Back to Reports</a></p>
+        <p><a href="/dashboard">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>
+
+

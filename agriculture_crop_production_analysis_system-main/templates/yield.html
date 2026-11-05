@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Yield Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f8f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #216b45;
+        }
+
+        .home {
+            display: inline-block;
+            background: #216b45;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #216b45;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f8f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌾 Crop Yield Analysis</h1>
+
+    <a class="home" href="/">← Home</a>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Crop</th>
+                <th>Region</th>
+                <th>Year</th>
+                <th>Area (ha)</th>
+                <th>Production (tonnes)</th>
+                <th>Yield (tonnes/ha)</th>
+            </tr>
+
+            {% for record in records %}
+            <tr>
+                <td>{{ record.crop_name }}</td>
+                <td>{{ record.region_name }}</td>
+                <td>{{ record.year }}</td>
+                <td>{{ record.cultivated_area_ha }}</td>
+                <td>{{ record.production_tonnes }}</td>
+                <td>{{ "%.2f"|format(record.yield_per_hectare|float) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+</html>

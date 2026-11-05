@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Crop Production Analysis</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f2;
+            margin: 0;
+            padding: 20px;
+            color: #26352b;
+        }
+
+        h1 {
+            text-align: center;
+            color: #246b3c;
+        }
+
+        h2 {
+            color: #246b3c;
+        }
+
+        .chart {
+            background-color: white;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #d5ddd5;
+        }
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Agricultural Crop Production Analysis System</h1>
+
+    <div class="chart">
+        <h2>Year-wise Crop Production</h2>
+        <img src="{{ url_for('static', filename='production_chart.png') }}"
+             alt="Year-wise crop production graph">
+    </div>
+
+    <div class="chart">
+        <h2>Crop-wise Production Comparison</h2>
+        <img src="{{ url_for('static', filename='crop_chart.png') }}"
+             alt="Crop-wise production graph">
+    </div>
+
+    <div class="chart">
+        <h2>Year-wise Crop Yield</h2>
+        <img src="{{ url_for('static', filename='yield_chart.png') }}"
+             alt="Year-wise crop yield graph">
+    </div>
+
+</body>
+</html>
