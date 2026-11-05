@@ -1,46 +1,78 @@
-Agricultural Crop Production Analysis System
+# Agriculture Crop Production Analysis System
 
-About the Project:
-This project analyzes agricultural crop production data using Python, MySQL, Flask, NumPy, and Pandas.
+A simple web application for analyzing crop production data and generating useful agricultural insights.
 
-Features:
-View crop and region details.
-Upload agricultural datasets using CSV files.
-Calculate crop yield.
-Analyze crop production across different years.
-Generate reports and charts.
-View data quality reports.
+## About the Project
+This project helps users view crop-related information, upload CSV data, analyze production trends, and generate reports for different regions and years.
 
-Technologies Used:
-Python
-Flask
-MySQL
-Pandas
-NumPy
-HTML and CSS
-Matplotlib
+## Features
+- View crop and region details
+- Upload crop data in CSV format
+- Analyze crop production by year
+- Check crop yield and rainfall data
+- Generate reports and charts
+- Manage farmer and crop records
 
-Project Structure:
+## Technologies Used
+- Python
+- Flask
+- HTML
+- CSS
+- Pandas
+- NumPy
+- MySQL
+- Matplotlib
 
-AgricultureCropAnalysis/
-│
+## Project Structure
+
+```text
+agriculture_crop_production_analysis_system-main/
+├── app.py
+├── requirements.txt
+├── agriculture_db.sqlite3
 ├── backend/
-│   ├── app.py
-│   ├── config.py
 │   ├── analysis.py
-│   └── charts.py
-│
-├── templates/
+│   ├── charts.py
+│   └── config.py
+├── database/
 ├── static/
-├── .gitignore
+├── templates/
+├── upload/
 └── README.md
+```
 
-How to Run:
-Clone or download this repository.
-Install the required Python libraries.
-Configure the MySQL database.
-Run the Flask application.
-Open the website in your browser.
+## How to Run
+1. Clone the repository.
+2. Open the project folder.
+3. Create a virtual environment:
 
-Project Goal:
-To analyze agricultural crop production data and present useful information through reports and visualizations.
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+```
+
+4. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+5. Start the application:
+
+```bash
+python app.py
+```
+
+6. Open the browser and go to:
+
+```text
+http://127.0.0.1:5000/
+```
+
+## Purpose
+The goal of this system is to help analyze agricultural crop production data and present useful information through reports and visualizations.
+
+## Notes
+- CSV files should contain crop, region, year, cultivated area, production, and rainfall data.
+- Make sure the database configuration is set correctly before running the app.
