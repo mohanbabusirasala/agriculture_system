@@ -1,78 +1,35 @@
 # Agriculture Crop Production Analysis System
 
-A simple web application for analyzing crop production data and generating useful agricultural insights.
-
-## About the Project
-This project helps users view crop-related information, upload CSV data, analyze production trends, and generate reports for different regions and years.
+A simple web app for viewing and analyzing crop production data.
 
 ## Features
-- View crop and region details
-- Upload crop data in CSV format
-- Analyze crop production by year
-- Check crop yield and rainfall data
-- Generate reports and charts
-- Manage farmer and crop records
+- Upload crop data from CSV files
+- View production, yield, and rainfall information
+- Analyze data by crop, region, and year
+- View charts and reports
 
-## Technologies Used
-- Python
-- Flask
-- HTML
-- CSS
-- Pandas
-- NumPy
-- MySQL
-- Matplotlib
+## Built With
+- Python and Flask
+- HTML and CSS
+- Pandas and NumPy
+- SQLite
 
-## Project Structure
+## Run the App
 
-```text
-agriculture_crop_production_analysis_system-main/
-├── app.py
-├── requirements.txt
-├── agriculture_db.sqlite3
-├── backend/
-│   ├── analysis.py
-│   ├── charts.py
-│   └── config.py
-├── database/
-├── static/
-├── templates/
-├── upload/
-└── README.md
-```
+1. Install Python.
+2. Install the project dependencies:
 
-## How to Run
-1. Clone the repository.
-2. Open the project folder.
-3. Create a virtual environment:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
-```
+3. Start the app:
 
-4. Install dependencies:
+   ```bash
+   python app.py
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+4. Open http://127.0.0.1:5000/ in your browser.
 
-5. Start the application:
-
-```bash
-python app.py
-```
-
-6. Open the browser and go to:
-
-```text
-http://127.0.0.1:5000/
-```
-
-## Purpose
-The goal of this system is to help analyze agricultural crop production data and present useful information through reports and visualizations.
-
-## Notes
-- CSV files should contain crop, region, year, cultivated area, production, and rainfall data.
-- Make sure the database configuration is set correctly before running the app.
+## Data
+Upload a CSV file containing crop and production information. Include fields such as crop, region, year, cultivated area, production, and rainfall.
